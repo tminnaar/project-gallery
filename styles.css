@@ -1,8 +1,12 @@
+html {
+	min-height: 100%;
+}
+
 body {
 	background: linear-gradient(#d9ed92, #34a0a4);
 	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+	min-height: 100%;
+	margin: 8px 0;
 }
 
 h3 {
@@ -11,8 +15,9 @@ h3 {
 }
 
 .card-container {
-	width: 100vw;
+	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
 	gap: 20px;
@@ -20,19 +25,58 @@ h3 {
 
 .card {
 	overflow: hidden;
-	height: 500px;
-	width: 26%;
-	padding: 20px;
+	height: fit-content;
+	/* max-height: 300px; */
+	transition: all 1s ease-in-out;
+	flex-basis: 25%;
 	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 40%);
 }
 
 .card-image {
-	width: 75%;
-	height: 75%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+}
+
+.card-description {
+	padding: 20px;
 }
 
 img {
 	width: 100%;
+}
+
+.expand-button {
+	padding: 20px;
+	text-align: center;
+}
+
+button {
+	color: white;
+	width: 85%;
+	height: 30px;
+	border: 0px;
+	border-radius: 18px;
+	background-color: #1a759f;
+}
+
+@media screen and (max-width: 1170px) {
+	.card {
+		flex-basis: 40%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.card {
+		flex-basis: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.card {
+		flex-basis: 90%;
+	}
 }
