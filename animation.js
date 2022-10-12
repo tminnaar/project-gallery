@@ -8,7 +8,6 @@ expandButtons.forEach((element, index) => {
 	element.addEventListener("click", (event) => {
 		expandCards.forEach((card, cardIndex) => {
 			const button = card.querySelector("button");
-			// debugger;
 			if (cardIndex === index && !card.classList.contains("full-card")) {
 				card.classList.add("full-card");
 				button.textContent = "- Collapse";
