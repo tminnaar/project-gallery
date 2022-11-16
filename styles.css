@@ -7,7 +7,10 @@ a {
 }
 
 body {
-	/* background: linear-gradient(#d9ed92, #34a0a4); */
+	display: flex;
+	align-content: stretch;
+	justify-content: center;
+	flex-direction: row;
 	background-color: #161513;
 	width: 100vw;
 	min-height: 100%;
@@ -20,15 +23,13 @@ h3 {
 }
 
 .card-container {
-	position: absolute;
-	left: 160px;
-	top: 100px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
-	width: 1600px;
 	gap: 30px;
+	max-width: 1600px;
+	margin: 5%;
 }
 
 .card {
@@ -39,19 +40,29 @@ h3 {
 	background-color: #211f1c;
 	border-radius: 25px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 80%);
-	aspect-ratio: 1/1;
+	/* aspect-ratio: 1/1; */
+}
+
+.text-body {
+	display: none;
+}
+
+.text-body p {
+}
+
+.text-body h3 {
+	margin: 0px;
 }
 
 .show-overlay .text-body {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	position: absolute;
 	box-sizing: border-box;
-	top: 0;
-	margin: 0;
 	padding: 30px;
-	height: 340px;
-	width: 400px;
+	height: 100%;
+	width: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
 	border-radius: 20px;
 	border-bottom-left-radius: 0px;
@@ -59,11 +70,7 @@ h3 {
 	backdrop-filter: blur(10px);
 	color: #eeedeb;
 	font-size: 20px;
-	line-height: 25px;
-
-	aspect-ratio: auto;
-	max-height: 400px;
-	max-width: 400px;
+	/* line-height: 25px; */
 }
 
 .image-button {
@@ -105,12 +112,14 @@ button {
 	cursor: pointer;
 }
 
-.text-body .git-repo {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	display: block;
-	margin: 0 auto;
+.git-icon {
+	width: 30px;
+	height: 30px;
+}
+
+.card-description {
+	width: 100%;
+	height: 100%;
 }
 
 @media screen and (min-width: 2560px) {
