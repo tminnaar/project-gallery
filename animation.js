@@ -1,8 +1,6 @@
 const expandCards = Array.from(document.getElementsByClassName("card"));
 
-const expandButtons = Array.from(
-	document.getElementsByClassName("expand-button")
-);
+const expandButtons = Array.from(document.getElementsByClassName("expand-button"));
 
 expandButtons.forEach((element, index) => {
 	element.addEventListener("click", (event) => {
@@ -14,6 +12,7 @@ expandButtons.forEach((element, index) => {
 			} else {
 				card.classList.remove("full-card");
 				button.textContent = "+ Expand";
+				button.style.borderRadius = "0";
 			}
 		});
 	});
