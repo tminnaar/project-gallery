@@ -6,12 +6,12 @@ expandButtons.forEach((element, index) => {
 	element.addEventListener("click", (event) => {
 		expandCards.forEach((card, cardIndex) => {
 			const button = card.querySelector("button");
-			if (cardIndex === index && !card.classList.contains("full-card")) {
-				card.classList.add("full-card");
-				button.textContent = "- Collapse";
+			if (cardIndex === index && !card.classList.contains("show-overlay")) {
+				card.classList.add("show-overlay");
+				button.textContent = "- See Less";
 			} else {
-				card.classList.remove("full-card");
-				button.textContent = "+ Expand";
+				card.classList.remove("show-overlay");
+				button.textContent = "+ See More";
 				button.style.borderRadius = "0";
 			}
 		});
