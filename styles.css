@@ -68,7 +68,7 @@ h3 {
 	border-bottom-right-radius: 0px;
 	backdrop-filter: blur(10px);
 	color: #eeedeb;
-	font-size: 20px;
+	font-size: 18px;
 	/* line-height: 25px; */
 }
 
@@ -122,34 +122,55 @@ button {
 	height: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 2560px) {
 	.card {
-	flex-basis: 70%;
+		max-height: 800px;
+	}
+	.show-overlay {
+		max-height: 1400px;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.card {
+		flex-basis: 40%;
 	}
 	p {
-	font-size: 3vw;
+		font-size: 2vw;
 	}
 	h3 {
-	font-size: 6vw;
+		font-size: 3vw;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.card {
+		flex-basis: 70%;
+	}
+	p {
+		font-size: 3vw;
+	}
+	h3 {
+		font-size: 6vw;
 	}
 	.git-icon {
-	width: 40px;
-	height: 40px;
+		width: 40px;
+		height: 40px;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.card {
-	flex-basis: 90%;
+		flex-basis: 90%;
 	}
 	p {
-	font-size: 4vw;
+		font-size: 4vw;
 	}
 	h3 {
-	font-size: 5vw;
+		font-size: 5vw;
 	}
 	.git-icon {
-	width: 30px;
-	height: 30px;
-}
+		width: 30px;
+		height: 30px;
+	}
 }
