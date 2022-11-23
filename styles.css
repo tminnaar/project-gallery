@@ -40,7 +40,6 @@ h3 {
 	background-color: #211f1c;
 	border-radius: 25px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 80%);
-	/* aspect-ratio: 1/1; */
 }
 
 .text-body {
@@ -115,6 +114,7 @@ button {
 .git-icon {
 	width: 30px;
 	height: 30px;
+	cursor: pointer;
 }
 
 .card-description {
@@ -122,29 +122,34 @@ button {
 	height: 100%;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (max-width: 900px) {
 	.card {
-		max-height: 800px;
+	flex-basis: 70%;
 	}
-	.show-overlay {
-		max-height: 1400px;
+	p {
+	font-size: 3vw;
 	}
-}
-
-@media screen and (max-width: 1170px) {
-	.card {
-		flex-basis: 40%;
+	h3 {
+	font-size: 6vw;
 	}
-}
-
-@media screen and (max-width: 800px) {
-	.card {
-		flex-basis: 70%;
+	.git-icon {
+	width: 40px;
+	height: 40px;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.card {
-		flex-basis: 90%;
+	flex-basis: 90%;
 	}
+	p {
+	font-size: 4vw;
+	}
+	h3 {
+	font-size: 5vw;
+	}
+	.git-icon {
+	width: 30px;
+	height: 30px;
+}
 }
