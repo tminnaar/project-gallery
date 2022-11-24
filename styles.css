@@ -11,10 +11,11 @@ body {
 	align-content: stretch;
 	justify-content: center;
 	flex-direction: row;
-	background-color: #161513;
+	background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
 	width: 100vw;
 	min-height: 100%;
 	margin: 8px 0;
+	overflow: hidden;
 }
 
 h3 {
@@ -39,14 +40,11 @@ h3 {
 	flex-basis: 25%;
 	background-color: #211f1c;
 	border-radius: 25px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 80%);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 80%);
 }
 
 .text-body {
 	display: none;
-}
-
-.text-body p {
 }
 
 .text-body h3 {
@@ -66,10 +64,9 @@ h3 {
 	border-radius: 20px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(6px);
 	color: #eeedeb;
 	font-size: 18px;
-	/* line-height: 25px; */
 }
 
 .image-button {
